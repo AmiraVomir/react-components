@@ -32,8 +32,8 @@ class GroceryListItems extends React.Component {
 }
   var GroceryList = (props) => (
       <ul>
-        {props.items.map( item =>
-          <GroceryListItems item = {item} />
+        {props.items.map( (item, i) =>
+          <GroceryListItems key={i} item={item}/>
           )}
       </ul>
   );
